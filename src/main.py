@@ -1,13 +1,16 @@
 ##################################################
-###### version               : 1.0.0        ######
+###### version               : 1.0.1        ######
 ###### first Release date    : 11.03.2024   ######
 ###### last Release date     : 12.03.2024   ######
 ###### author                : mgkorkut     ######
 ##################################################
 
 
-import guiQt
-from help import Ui_Form
+#import guiQt
+#from help import Ui_Form
+
+from gui import guiQt
+from gui.help import Ui_Form
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QDialog
