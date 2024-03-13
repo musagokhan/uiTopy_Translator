@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'gui.ui'
+# Form implementation generated from reading ui file 'g.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -20,13 +20,13 @@ class Ui_MainWindow(object):
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 400, 341))
         self.label_5.setText("")
-        self.label_5.setPixmap(QtGui.QPixmap("back.png"))
+        self.label_5.setPixmap(QtGui.QPixmap("backWal.png"))
         self.label_5.setScaledContents(True)
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(71, 11, 249, 127))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("img.png"))
+        self.label.setPixmap(QtGui.QPixmap("logo.png"))
         self.label.setObjectName("label")
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setGeometry(QtCore.QRect(20, 150, 361, 171))
@@ -116,7 +116,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_2.setText(_translate("MainWindow", "                     ui TO py Program"))
         self.pushButton_2.setText(_translate("MainWindow", "Help"))
-        self.label_7.setText(_translate("MainWindow", "v.1.0.0"))
+        self.label_7.setText(_translate("MainWindow", "v.1.1.1"))
         self.pushButton.setText(_translate("MainWindow", "RUN"))
         self.label_6.setText(_translate("MainWindow", "info"))
         self.lineEdit_2.setText(_translate("MainWindow", "gui.py"))

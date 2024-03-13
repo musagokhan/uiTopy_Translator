@@ -1,14 +1,14 @@
 ##################################################
-###### version               : 1.0.1        ######
+###### version               : 1.1.1        ######
 ###### first Release date    : 11.03.2024   ######
-###### last Release date     : 12.03.2024   ######
+###### last Release date     : 13.03.2024   ######
 ###### author                : mgkorkut     ######
 ##################################################
 
 
 #import guiQt
 #from help import Ui_Form
-
+import os
 from gui import guiQt
 from gui.help import Ui_Form
 from PyQt5.QtWidgets import QApplication, QMainWindow
@@ -34,10 +34,13 @@ class mainClass(QMainWindow):
         uiFile = self.ui.lineEdit.text()
         pyFile = self.ui.lineEdit_2.text()
         
+        currentPath = os.path.dirname(os.path.abspath(__file__)) 
+        print(f"currentPath    : {currentPath}")
 
         command = f"pyuic5 -x {uiFile} -o {pyFile}"
         try:
             subprocess.run(command, shell=True, check=True)
+            self.ui.lineEdit_3.setStyleSheet("color: darkgreen")
             self.ui.lineEdit_3.setText(f"{pyFile} file successfully created")
             self.ui.pushButton.setStyleSheet("background-color: darkgreen")
         except subprocess.CalledProcessError:
@@ -58,6 +61,16 @@ class mainClass(QMainWindow):
 def window():   
     app = QApplication(sys.argv)
     main_window = mainClass()
+
+    # update PNG path
+    currentPath = os.path.dirname(os.path.abspath(__file__)) 
+    imgPath = os.path.join(currentPath,  "gui", "img")  # img folder PATH
+    backwalPath = os.path.join(imgPath, "backWal.png")  # backWal PATH
+    logoPath = os.path.join(imgPath, "logo.png")  # logo PATH
+    # update PNG Path
+    main_window.ui.label_5.setPixmap(QtGui.QPixmap(backwalPath))
+    main_window.ui.label.setPixmap(QtGui.QPixmap(logoPath))
+
     main_window.show()
     sys.exit(app.exec_())
 
